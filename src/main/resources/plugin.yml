@@ -1,0 +1,4 @@
+main: teik.ers.bukkit.ErsDiscord
+name: ErsDiscord
+version: 1.0.0
+author: teik

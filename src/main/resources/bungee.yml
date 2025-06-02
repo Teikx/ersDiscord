@@ -1,0 +1,4 @@
+main: teik.ers.bungee.ErsDiscord
+name: ErsDiscord
+version: 1.0.0
+author: teik
