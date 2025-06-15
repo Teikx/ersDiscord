@@ -27,7 +27,7 @@ public class DsConnection {
         }
         Bukkit.getConsoleSender().sendMessage(
                 ChatColor.translateAlternateColorCodes('&',
-                        "&b[&fEpicReports&b]&c Error 503: Error connecting to Discord bot. Contact the developer.")
+                        "&b[&fEpicReports&b]&c Error 503: Error connecting to Discord bot. Your bot token is invalid.")
         );
     }
 
@@ -43,7 +43,7 @@ public class DsConnection {
         }
         plugin.getLogger().info(
                 net.md_5.bungee.api.ChatColor.translateAlternateColorCodes('&',
-                        "&b[&fEpicReports&b]&c Error 503: Error connecting to Discord bot. Contact the developer.")
+                        "&b[&fEpicReports&b]&c Error 503: Error connecting to Discord bot. Your bot token is invalid.")
         );
     }
 

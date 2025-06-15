@@ -46,18 +46,30 @@ public class DsMG {
     }
 
     public void sendDiscordMessage(Report report) {
-        Guild guild = jda.getGuildById(serverID);
-        if (guild == null) {
+        Guild guild = null;
+        try{
+            guild = jda.getGuildById(serverID);
+        }catch (Exception e){
             logError("504", "serverID");
             return;
         }
 
-        TextChannel channel = guild.getTextChannelById(channelID);
-        if (channel == null) {
+        TextChannel channel = null;
+        try{
+            if(guild == null) {
+                logError("504", "serverID");
+                return;
+            }
+             channel = guild.getTextChannelById(channelID);
+        }catch (Exception e){
             logError("505", "channelID");
             return;
         }
 
+        if (channel == null) {
+            logError("505", "channelID");
+            return;
+        }
         EmbedBuilder embed = buildEmbed(report);
         channel.sendMessageEmbeds(embed.build()).queue();
     }

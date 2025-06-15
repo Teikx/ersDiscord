@@ -1,6 +1,7 @@
 package teik.ers.bukkit;
 
 import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.internal.utils.JDALogger;
 import org.bukkit.plugin.java.JavaPlugin;
 import teik.ers.bukkit.config.DiscordManager;
 import teik.ers.global.DsConnection;
@@ -19,6 +20,7 @@ public class ErsDiscord extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        JDALogger.setFallbackLoggerEnabled(false);
         discordManager = new DiscordManager(this);
         dsConnection = new DsConnection(this);
         jda = dsConnection.getJda();
@@ -42,6 +44,7 @@ public class ErsDiscord extends JavaPlugin {
     }
 
     public void sendDiscordMessage(Report report) {
+        System.out.print("Sending Discord message");
         dsMG.sendDiscordMessage(report);
     }
 

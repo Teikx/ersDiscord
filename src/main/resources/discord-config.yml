@@ -1,26 +1,16 @@
 #
 #   Discord Bot Settings
 #
-#   To send reports to Discord, enter your server ID in the serverID field,
-#   and the text channel ID in channelID.
-#
-#   To get these IDs, enable Developer Mode in Discord, right-click on
-#   the server or channel, and select "Copy ID".
-#
-#   Finally, to get this feature, you need add EpicReports bot to your
-#   Discord server. To do this, link here:
-#   https://discord.com/oauth2/authorize?client_id=1371538199750643784&permissions=1689384584214592&scope=bot
-#
 #   If you're still unsure, check the wiki for detailed instructions:
-#   [Wiki Link]
+#   https://teik.gitbook.io/epicreports/ersdiscord/how-to-start-ers-discord
 #
 
 
 Discord_Settings:
   Discord:
-    botToken: ""
-    serverID: ""
-    channelID: ""
+    botToken: "<your-bot-token>"
+    serverID: "<your-server-id>"
+    channelID: "<your-sever-channel-id>"
 
 Discord_Msg:
   Title: "New Report #%reportID%"
